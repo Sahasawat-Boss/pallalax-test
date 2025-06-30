@@ -73,6 +73,19 @@ export default function ParallaxScene() {
                 className="absolute top-0 left-0 w-full h-full object-cover z-0 blur"
                 style={{ filter: 'brightness(0.9) saturate(0.9) blur(0.8px)' }}
             />
+            {/* Black Gradient Overlay */}
+            <div
+                className="absolute top-0 left-0 w-full h-full z-0"
+                style={{
+                    background: 'linear-gradient(to top, rgba(0, 0, 0, 1), transparent 15%)',
+                }}
+            />
+            <div
+                className="absolute top-0 left-0 w-full h-full z-0"
+                style={{
+                    background: 'linear-gradient(to bottom, rgba(0, 0, 0, 0.4), transparent 20%)',
+                }}
+            />
 
             {/* ShiningStars Deco -------------------------------------------------------------------------------*/}
             <ShiningStars />
@@ -82,7 +95,7 @@ export default function ParallaxScene() {
                 id="house"
                 src="/layers/house.png"
                 alt="House"
-                className="absolute top-18 -left-50 w-full h-full object-cover z-10 pointer-events-none"
+                className="absolute top-18 -left-50 w-full h-full object-cover z-10 pointer-events-none hidden md:block"
                 style={{ filter: 'brightness(0.8) saturate(0.95)' }}
             />
             <img
@@ -150,14 +163,14 @@ export default function ParallaxScene() {
                 src="/layers/leaf.png"
                 alt="Flower 1"
                 className="absolute top-12 -left-30 w-100 h-auto z-30 pointer-events-none"
-                style={{ filter: 'hue-rotate(0deg) brightness(0.15) saturate(0.8)' }}
+                style={{ filter: 'hue-rotate(0deg) brightness(0.18) saturate(0.8)' }}
             />
             <img
                 id="house"
                 src="/layers/leaf.png"
                 alt="Flower 1"
-                className="absolute top-0 -left-12 w-100 h-auto z-30 pointer-events-none"
-                style={{ filter: 'hue-rotate(0deg) brightness(0.15) saturate(0.8)' }}
+                className="absolute top-0 -left-12 w-100 h-auto z-30 pointer-events-none "
+                style={{ filter: 'hue-rotate(0deg) brightness(0.18) saturate(0.8)' }}
             />
 
             {/* Leaf Right */}
@@ -166,21 +179,21 @@ export default function ParallaxScene() {
                 src="/layers/leaf.png"
                 alt="Flower 1"
                 className="absolute top-2 -right-30 w-100 h-auto z-30 pointer-events-none"
-                style={{ filter: 'hue-rotate(0deg) brightness(0.15) saturate(0.8)' }}
+                style={{ filter: 'hue-rotate(0deg) brightness(0.18) saturate(0.8)' }}
             />
             <img
                 id="house"
                 src="/layers/leaf.png"
                 alt="Flower 1"
                 className="absolute -top-4 -right-20 w-100 h-auto z-30 pointer-events-none"
-                style={{ filter: 'hue-rotate(0deg) brightness(0.15) saturate(0.8)' }}
+                style={{ filter: 'hue-rotate(0deg) brightness(0.18) saturate(0.8)' }}
             />
             <img
                 id="house"
                 src="/layers/leaf.png"
                 alt="Flower 1"
                 className="absolute top-16 -right-55 w-100 h-auto z-30 pointer-events-none scale-x-[-1]"
-                style={{ filter: 'hue-rotate(0deg) brightness(0.15) saturate(0.8)' }}
+                style={{ filter: 'hue-rotate(0deg) brightness(0.18) saturate(0.8)' }}
             />
         </div>
     );
