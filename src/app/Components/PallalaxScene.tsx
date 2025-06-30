@@ -43,7 +43,7 @@ export default function ParallaxScene() {
                     trigger: containerRef.current,
                     start: 'top bottom',
                     end: 'bottom top',
-                    scrub: 2.5,
+                    scrub: 2.65,
                 },
             });
 
@@ -55,7 +55,7 @@ export default function ParallaxScene() {
                     trigger: containerRef.current,
                     start: 'top bottom',
                     end: 'bottom top',
-                    scrub: 2.8,
+                    scrub: 2.85,
                 },
             });
         }, containerRef);
@@ -65,31 +65,31 @@ export default function ParallaxScene() {
 
     return (
         <div ref={containerRef} className="relative h-[100vh] overflow-hidden bg-black">
-            {/* Background */}
+            {/* Background -------------------------------------------------------------------------------*/}
             <img
-                src="/layers/bg.png"
+                src="/layers/bg2.png"
                 alt="Background"
-                className="absolute top-0 left-0 w-full h-full object-cover z-0"
-                style={{ filter: 'brightness(0.9) saturate(0.9)' }}
+                className="absolute top-0 left-0 w-full h-full object-cover z-0 blur"
+                style={{ filter: 'brightness(0.9) saturate(0.9) blur(0.8px)' }}
             />
 
-            {/* House Layer */}
+            {/* House Layer -------------------------------------------------------------------------------*/}
             <img
                 id="house"
                 src="/layers/house.png"
                 alt="House"
-                className="absolute top-5 -left-50 w-full h-full object-cover z-10 pointer-events-none"
+                className="absolute top-14 -left-50 w-full h-full object-cover z-10 pointer-events-none" 
                 style={{ filter: 'brightness(0.95) saturate(0.95)' }}
             />
             <img
-                id="house"
+                id="flowers"
                 src="/layers/house.png"
                 alt="House"
-                className="absolute top-0 left-0 w-full h-full object-cover z-10 pointer-events-none"
+                className="absolute top-16 left-0 w-full h-full object-cover z-10 pointer-events-none"
                 style={{ filter: 'brightness(0.95) saturate(0.95)' }}
             />
 
-            {/* Main Flower Foreground */}
+            {/* Main Flower Foreground -------------------------------------------------------------------------------*/}
             <img
                 id="flowers"
                 src="/layers/flowers.png"
@@ -98,22 +98,51 @@ export default function ParallaxScene() {
                 style={{ filter: 'brightness(1) saturate(1.1)' }}
             />
 
-            {/* Extra Flower 1 */}
+            {/* Left Flower */}
             <img
-                id="flower-1"
+                id="flowers"
                 src="/layers/flower1.png"
                 alt="Flower 1"
-                className="absolute bottom-0 right-[15rem] w-52 h-52 object-cover z-30 pointer-events-none"
-                style={{ filter: 'brightness(1) saturate(0.9)' }}
+                className="absolute -bottom-10 right-[14rem] w-52 h-52 object-cover z-30 pointer-events-none"
+                style={{ filter: 'brightness(1) saturate(0.8)' }}
             />
 
-            {/* Extra Flower 2 */}
+            <img
+                id="flower-2"
+                src="/layers/flower1.png"
+                alt="Flower 1"
+                className="absolute bottom-4 left-[16rem] w-62 h-62 object-cover z-30 pointer-events-none scale-x-[-1]"
+                style={{ filter: 'brightness(1) saturate(0.8)' }}
+            />
+            <img
+                id="flower-2"
+                src="/layers/flower1.png"
+                alt="Flower 1"
+                className="absolute -bottom-18 left-[20rem] w-50 h-50 object-cover z-30 pointer-events-none scale-x-[-1]"
+                style={{ filter: 'brightness(1) saturate(0.8)' }}
+            />
+            <img
+                id="flower-2"
+                src="/layers/flower1.png"
+                alt="Flower 1"
+                className="absolute -bottom-32 left-[28rem] w-62 h-62 object-cover z-30 pointer-events-none"
+                style={{ filter: 'brightness(1) saturate(0.7)' }}
+            />
+
+            {/* Flower Right */}
             <img
                 id="flower-2"
                 src="/layers/flower1.png"
                 alt="Flower 2"
-                className="absolute bottom-10 right-[45rem] w-52 h-52 object-cover z-30 pointer-events-none"
-                style={{ filter: 'brightness(1) saturate(0.9)' }}
+                className="absolute -bottom-1 right-[45rem] w-52 h-52 object-cover z-30 pointer-events-none"
+                style={{ filter: 'brightness(1) saturate(0.8)' }}
+            />
+                        <img
+                id="flower-1"
+                src="/layers/flower1.png"
+                alt="Flower 1"
+                className="absolute -bottom-14 right-[22rem] w-46 h-46 object-cover z-30 pointer-events-none scale-x-[-1]"
+                style={{ filter: 'brightness(1) saturate(0.8)' }}
             />
         </div>
     );
